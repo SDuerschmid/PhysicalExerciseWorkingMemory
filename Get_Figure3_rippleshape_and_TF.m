@@ -31,37 +31,32 @@ myaxis('Time (s)','MEG signal (µV)')
 
 
 %% ripple time frequency
-load( 'rtf_1-200.mat', 'RTF' )
-
-rwin            = -srate:srate;
-TF              = [];
-TF              = cat( 4,TF,RTF );
-time            = linspace( -1,1,length( rwin ));
-
 F                         	= GetExponentialCenterFrequency( [1 200],50,.1 );
 
-% baseline correction
-rppbsl          = [1:400];
-TF              = TF-repmat( nanmean( TF( :,:,rppbsl,: ),3 ),[1 1 1001 1]);
-TF              = TF./repmat( nanstd( TF( :,:,rppbsl,: ),0,3 ),[1 1 1001 1]);
-TF              = squeeze( mean( nanmean( TF,2 ),4 ));
-
-% interpolation of frequency dimension
-[Xi,Yi]         = meshgrid(linspace( 1,length( F ),100 ),1:length( time ) );
-rtf             = interp2(TF',Xi,Yi )';
-
+load('rtf_1-200_mean.mat')
 % frequency upside down
 rtf             = rtf( end:-1:1,: );
 
 m = linspace( 1,100,19 );
 mark = num2str( round( mean( F( end:-2:1,: ),2 )));
-figure('Units','centimeter','Position',[5 5 15 13])
+figure('Units','centimeter','Position',[5 5 8 13])
 imagesc( time,1,rtf )
 set( gca,'ytick',m,'yticklabel',mark)
 xlim([-0.2 0.2])
-% ylim([1 40])
 caxis([0 16])
 myaxisSmallFigure('time [sec]','frequency [Hz]')
 colorbar
 set( gcf,'color',[1 1 1])
+
+
+figure('Units','centimeter','Position',[5 5 10 13])
+imagesc( time,1,rtf )
+set( gca,'ytick',m,'yticklabel',mark)
+xlim([-0.2 0.2])
+ylim([1 40])
+caxis([0 16])
+myaxisSmallFigure('time [sec]','frequency [Hz]')
+colorbar
+set( gcf,'color',[1 1 1])
+
 
