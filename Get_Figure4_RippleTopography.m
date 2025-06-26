@@ -1,5 +1,5 @@
 clear all
-close all hidden
+close all
 clc
 
 
