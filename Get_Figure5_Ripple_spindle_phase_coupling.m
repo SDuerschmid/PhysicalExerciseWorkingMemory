@@ -16,4 +16,6 @@ imagesc( bincenter,1,mean( gartf,3 ))
 set( gca,'ytick',linspace( 1,100,length( nf )),'yticklabel',nf )
 pbaspect([1 1 1])
 ylim([50 100])
-myaxisSmallFigure('time [sec]','frequency [Hz]')
+myaxisSmallFigure('spindle phase [rad]','frequency [Hz]')
+set(gca, 'xtick', [-pi -pi/2 0 pi/2 pi],'xticklabel',{'-pi', '-pi/2', '0' ,'pi/2', 'pi'})
+
