@@ -111,7 +111,7 @@ shadedErrorBar( rwin,M,E,'m' )
 line([0 0],[-1 1])
 ylim([-1 1])
 xlim([-.1 .1])
-myaxis('time to ripple onset','amplitude' )
+myaxis('time to ripple peak [sec]','low frequency amplitude' )
 
 % %% plotting
 peaktime                                    = rwin( maxwin( PT ));
