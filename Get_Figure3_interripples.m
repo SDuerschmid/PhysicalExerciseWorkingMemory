@@ -26,5 +26,5 @@ ylim([0 0.65])
 % xticks([1 2])
 % title('correction');
 ylabel('Probability');
-xlabel('Inter ripple interval [s]');
+xlabel('Inter ripple interval [sec]');
 hold off
