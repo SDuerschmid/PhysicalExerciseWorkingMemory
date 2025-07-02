@@ -22,5 +22,6 @@ errorbar( [1.3 1.7],mean( R ),std( R )./sqrt( 210 ),'color',[.2 .2 .2],'linewidt
 ylim([-.5 1])
 xlim([0 3])
 myaxis( 'condition','atanh( r )' )
-set( gca,'xtick',1:2,'xticklabel',{'rest','locomotion'})
+set( gca,'xtick',1:2,'xticklabel',{'rest','PA'})
+text( 1.25,0.95,['****'],'FontName','times','FontSize',30)
 pbaspect([1 1 1])
