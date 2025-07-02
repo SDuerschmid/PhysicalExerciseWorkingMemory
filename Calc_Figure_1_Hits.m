@@ -30,7 +30,7 @@ ylim([0 1.2])
 
 %% ttest
 [h,p,ci,stat]        = ttest( B( :,1 ),B( :,2 ));
-text( 1.3,1.1,['**'],'FontName','times','FontSize',30)
+text( 1.3,1.1,['*'],'FontName','times','FontSize',30)
 xlim([-1 4])
 
 
