@@ -49,7 +49,7 @@ end
 
 %% looking at the data
 x                       = [1 2; 5 6; 9 10];
-signum                  = {'n.s.','*','n.s.'}
+signum                  = {'n.s.','+','n.s.'}
 figure; hold on
 for n = 1:3;
     Xi                  = GetOffset4OverlappingDataPoints( squeeze( H( :,n,: )),8,x( n,: ),100 );
