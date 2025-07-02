@@ -83,7 +83,7 @@ shadedErrorBar( rwin,M,E,'k' )
 line([0 0],[-1.5 1.5])
 ylim([-1.5 1.5])
 xlim([-.1 .1])
-myaxis('time to ripple onset','amplitude' )
+myaxis('time to ripple peak [sec]','low frequency amplitude' )
 
 % original process
 filename                                    = (['Ripple_EEG_coupling_m.mat']);
