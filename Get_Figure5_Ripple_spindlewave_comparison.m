@@ -20,7 +20,7 @@ line([0 0],[-1 1])
 pbaspect([1 .5 1])
 set( gca,'xtick',[-.1 0 .1])
 set( gca,'ytick',[-1 0 1])
-xlabel( 'time to ripple peak' )
+xlabel( 'time to ripple peak [sec]' )
 ylabel( 'spindle amplitude' )
 
 
@@ -38,7 +38,7 @@ ylim([-1 1])
 pbaspect([1 .5 1])
 set( gca,'xtick',[-.1 0 .1])
 set( gca,'ytick',[-1 0 1])
-xlabel( 'time to ripple peak' )
+xlabel( 'time to ripple peak [sec]' )
 ylabel( 'spindle amplitude' )
 
 
