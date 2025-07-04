@@ -3,7 +3,7 @@ close all hidden
 clc
 
 
-addpath( 'C:\Users\stefa\OneDrive\Experimente\allscripts')
+addpath( 'WM_function')
 
 %% loading the data
 filename            = ['meg_falsealarms.mat'];
