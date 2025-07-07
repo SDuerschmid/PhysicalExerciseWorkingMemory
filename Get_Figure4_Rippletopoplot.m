@@ -20,6 +20,7 @@ aN                                      = cat( 2,aN,rN );
 
 
 % color bar fig
+addpath( 'WM_function/ft4topoplot')
 cfg                 = topoprepare( 'Neuromag_helmet.mat' );
 cfg.contournum      = 0;
 cfg.electrodes      = 'off';
